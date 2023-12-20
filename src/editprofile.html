@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FOODEE</title>
+    <link rel="icon" href="./public/favicon.ico" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <link rel="stylesheet" href="./styles/profile.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="./scripts/editprofile.js"></script>
+  </head>
+
+  <body>
+    <header class="appbar">
+      <nav class="appbar-nav">
+        <a href="./index.html" class="pageTitle"><h1>FOODEE</h1></a>
+        <span style="flex-grow: 1"></span>
+        <!-- Search Bar -->
+        <form class="search" action="">
+          <input
+            type="text"
+            placeholder="What are you craving?"
+            name="search-bar"
+          />
+          <button type="submit">
+            <span class="material-symbols-outlined"> search </span>
+          </button>
+        </form>
+
+        <a
+          href="./createpost.html"
+          style="text-decoration: none; color: inherit"
+        >
+          <span
+            id="add-button"
+            class="material-symbols-outlined"
+            style="margin-right: 8px"
+          >
+            add
+          </span>
+        </a>
+      </nav>
+    </header>
+
+    <main>
+      <div class="profile-details">
+        <div class="backdrop-container">
+          <span
+            class="material-symbols-outlined attach-header"
+            style="position: absolute; cursor: pointer"
+          >
+            photo_camera
+          </span>
+          <input id="header-input" type="file" style="display: none" />
+          <img src="" alt="" class="header-img" width="100%" height="100%" />
+        </div>
+        <div class="profile-details-container">
+          <div class="main-details">
+            <div class="pfp-container">
+              <img
+                src=""
+                alt=""
+                width="160px"
+                height="160px"
+                class="profile-img"
+              />
+              <span
+                class="material-symbols-outlined attach-pfp"
+                style="position: absolute; cursor: pointer"
+              >
+                photo_camera
+              </span>
+              <input id="pfp-input" type="file" style="display: none" />
+            </div>
+            <div style="display: flex; flex-direction: column">
+              <h1 class="profile-name"></h1>
+              <div style="display: flex">
+                <a class="edit" id="cancel"><p>Cancel Edit</p></a>
+                <a class="edit" id="done" style="margin-left: 8px"
+                  ><p>Done</p></a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="other-details">
+          <div class="more-details">
+            <p>Bio</p>
+            <textarea
+              rows="12"
+              cols="40"
+              style="resize: none; width: 100%"
+              id="bio"
+            ></textarea>
+            <div>
+              <input
+                type="text"
+                style="width: 100%; height: 40px"
+                class="location-input"
+                placeholder="Enter your location"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <div class="status-popup">
+      <h4 id="status-message"></h4>
+    </div>
+  </body>
+</html>
